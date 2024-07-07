@@ -4,10 +4,14 @@ server:
 spring:
   application:
     name: config-server-01
+  profiles:
+    active: git # git, native, vault
 
   cloud:
     config:
       server:
+        native:
+          search-locations: file:///C:/backend/config-repo
         git:
           uri: https://github.com/czyoyo/config-data-01.git
           default-label: master
