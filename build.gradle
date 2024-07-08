@@ -26,6 +26,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-bus-amqp', version: '4.1.1'
 }
 
 dependencyManagement {

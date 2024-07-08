@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: config-server-01
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
   profiles:
     active: git # git, native, vault
 
@@ -15,3 +22,9 @@ spring:
         git:
           uri: https://github.com/czyoyo/config-data-01.git
           default-label: master
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health
